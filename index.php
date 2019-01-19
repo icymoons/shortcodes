@@ -549,3 +549,30 @@ function recap_bref($atts)
 }
 
 add_shortcode('recapbref', 'recap_bref');
+
+
+
+function recap_bref($atts)
+{
+    $atts = shortcode_atts(array(
+        'nom' => 'Pas de nom',
+        'lienimage' => '#',
+        'lienoffre' => '#',
+        'resume' => '',
+        'vitessemax' => 'NC',
+        'autonomie' => 'NC',
+        'pliable' => 'NC',
+        'poidsmax' => 'NC',
+        'composition' => 'NC',
+        'dimensions' => 'NC',
+        'poids' => 'NC',
+        'pointsforts'=> '',
+        'pointsfaibles'=> '',
+        'note'=> '0',
+    ), $atts, 'comparer');
+    
+    $ret = '';
+    return $ret;
+}
+
+add_shortcode('recapbref', 'recap_bref');
